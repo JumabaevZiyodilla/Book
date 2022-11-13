@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Books</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="book-form" method="post" autocomplete="off">
+            <input class="book-search" type="search" placeholder="Search a book">
+            <button class="book-btn" type="submit">Search</button>
+        </form>
+        <ul class="book-list">
+
+        </ul>
+    </div>
+    <template class="template">
+        <li class="book-item">
+            <div class="book-item-box">
+                <img class="book-img" src="https://picsum.photos/170/230">
+                <h3 class="book-title"></h3>
+                <p class="book-text"></p>
+                <div class="book-box">
+                    <p class="book-year"></p>
+                    <p class="book-page"></p>
+                    <p class="book-language"></p>
+                </div>
+                <div class="book-info-box">
+                    <a class="book-link" target="blank" href="#"></a>
+                    <p class="book-country"></p>
+                </div>
+            </div>
+        </li>
+    </template>
+    <script src="./books.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
