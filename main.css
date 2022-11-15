@@ -26,10 +26,7 @@ body{
     display: flex;
     text-align: center;
 }
-/* .logo{
-    display: flex;
-    text-align: center;
-} */
+
 .logo-text{
     position: relative;
     bottom: -10px;
@@ -39,8 +36,7 @@ body{
 .logo-text-span{
     color: #ffa500;
 }
-.nav-box {
-}
+
 .nav-list {
     display: flex;
     justify-content: space-between;
@@ -64,35 +60,61 @@ body{
 
 .book-form{
     display: flex;
-    justify-content: center;
-    margin: 40px 0px 100px 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0px 40px 0px;
     padding: 20px;
     background: #f7bb74;
     border-radius: 20px;
 }
-.book-search{
-    width: 300px;
-    margin-right: 20px;
-    padding: 15px;
-    font-size: 20px;
+.book-search,
+.book-sort,
+.book-toyear,
+.book-btn,
+.country-select,
+.author-select{
+    padding: 5px 10px;
+    font-size: 18px;
     background-color: #F9F3EF;
     border: 5px solid transparent;
     border-radius: 10px;
     outline: none;
 }
-.book-search:focus{
+
+.book-search:focus,
+.book-sort:focus,
+.book-toyear:focus,
+.book-btn:focus,
+.country-select:focus,
+.author-select:focus{
     border: 5px solid orange;
 }
 .book-btn{
-    padding: 15px;
-    font-size: 20px;
-    background-color: orange;
-    border: 1px solid wheat;
-    color: #fff;
-    border-radius: 10px;
+    color: #808080;
+}
+
+option{
+    background-color: rgb(255, 165, 0,0.3);
+}
+
+.book-btn:hover{
+    border: 5px solid #808080;
+    transition: all 0.3s ease;
 }
 .book-search::placeholder{
     color: #808080b8;
+}
+.btn{
+    display: block;
+    width: 100px;
+    margin: 0 auto 40px auto;
+    background-color: #ffa60080;
+    border: 3px solid transparent
+}
+.btn:hover{
+    color: #ffa500;
+    background-color: #fff !important;
+    border: 3px solid #ffa500;
 }
 /* LIST STYLE */
 .book-list {
@@ -116,27 +138,37 @@ body{
     background-color: #ecd8ca;
     border-radius: 10px;
     box-shadow:  0px 10px 25px 0px #fff;
+    transition: transform 0.5s ease;
 }
 
 .book-item:hover{
     transform: scale(1.1);
     box-shadow:  0px 10px 25px 0px #000;
-    transition: all 0.5s ease;
+    
 }
 .book-item-box{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    height: 100%;
     padding: 20px;
     background-color: #F9F3EF;
     border-radius: 10px;
-    height: 100%;
 }
 .book-img{
     margin: 0 auto;
     width: 200px;
     height: 250px;
+}
+.book-icon{
+    position: absolute;
+    right: 10px;
+    background-image: url("./icons/star-border.svg");
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
 }
 .book-title {
     text-transform: capitalize;

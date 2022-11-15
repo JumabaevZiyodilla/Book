@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
     <title>Books</title>
 </head>
@@ -39,8 +42,31 @@
     <div class="container">
         <form class="book-form" method="post" autocomplete="off">
             <input class="book-search" type="search" placeholder="Search a book">
+            <select class="book-sort">
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+                <option value="min-page">Min to Max Page</option>
+                <option value="max-page">Max to Min Page</option>
+                <option value="min-year">Min to Max Year</option>
+                <option value="max-year">Max to Min Year</option>
+            </select>
+            <input class="book-toyear" type="number" placeholder="To year">
+            <select class="country-select">
+                <option value="all">Choose a country</option>
+            </select>
+            <select class="author-select">
+                <option value="all">Choose a author</option>
+            </select>
             <button class="book-btn" type="submit">Search</button>
         </form>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">Chosen</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        </div>
         <ul class="book-list">
 
         </ul>
@@ -49,6 +75,7 @@
         <li class="book-item">
             <div class="book-item-box">
                 <img class="book-img" src="https://picsum.photos/170/230">
+                <button class="book-icon"></button>
                 <h3 class="book-title"></h3>
                 <p class="book-text"></p>
                 <div class="book-box">
@@ -63,6 +90,10 @@
             </div>
         </li>
     </template>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
     <script src="./books.js"></script>
     <script src="./main.js"></script>
 </body>
